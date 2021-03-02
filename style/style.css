@@ -10716,7 +10716,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #212529 !important;
 }
 
-.text-muted {
+.text-muted, #welcomeMessageContainer #welcomeMessage .comment {
   color: #6c757d !important;
 }
 
@@ -10835,5 +10835,68 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body {
+  background-color: #00234f;
+}
+
+#welcomeMessageContainer #welcomeMessage {
+  margin-top: 20%;
+}
+
+#welcomeMessageContainer #welcomeMessage .statement {
+  color: #f758e9;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .standard {
+  color: white;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .reserved {
+  color: #fcc429;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .variable {
+  color: #00eeff;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .function {
+  color: #fcc429;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .special {
+  color: #fd7a7a;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .comment {
+  color: #dbd9d9;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .new {
+  color: #00eb00;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .this {
+  color: #00ffbf;
+  margin: 0px 2px;
+}
+
+#welcomeMessageContainer #welcomeMessage .tabbed {
+  margin-left: 35px;
+}
+
+#enterBtn {
+  font-size: 20px;
+  border-radius: 0px;
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */

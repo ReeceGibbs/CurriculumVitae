@@ -1,1 +1,89 @@
 @import "./bootstrap/scss/bootstrap";
+
+//setting our statment text colour
+$statementCol: rgb(247, 88, 233);
+//setting our standard text colour
+$standardCol: white;
+//setting our reserved words colour
+$functionsCol: rgb(252, 196, 41);
+//setting our variables colour
+$variablesCol: rgb(0, 238, 255);
+//setting special reference colour
+$specialStringsCol: rgb(253, 122, 122);
+//setting comments colour
+$commentsCol: rgb(219, 217, 217);
+//setting our new object colour
+$newCol: rgb(0, 235, 0);
+//setting this colour
+$thisCol: rgb(0, 255, 191);
+//setting our word spacing
+$wordMargins: 0px 2px;
+
+// setting the style of of our splash page body
+body {
+    background-color: #00234f;
+}
+
+// set the styling of our welcome message
+#welcomeMessageContainer {
+    #welcomeMessage {
+        margin-top: 20%;
+        //styling statements
+        .statement {
+            color: $statementCol;
+            margin: $wordMargins;
+        }   
+        //styling normal strings
+        .standard {
+            color: $standardCol;
+            margin: $wordMargins;
+        }
+        //styling our reserved words
+        .reserved {
+            color: $functionsCol;
+            margin: $wordMargins;
+        }
+        //styling our variables
+        .variable {
+            color: $variablesCol;
+            margin: $wordMargins;
+        }
+        //styling our functions
+        .function {
+            color: $functionsCol;
+            margin: $wordMargins;
+        }
+        //styling our special strings
+        .special {
+            color: $specialStringsCol;
+            margin: $wordMargins;
+        }
+        //styling our comments
+        .comment {
+            @extend .text-muted;
+            color: $commentsCol;
+            margin: $wordMargins;
+        }
+        //styling our new object keyword
+        .new {
+            color: $newCol;
+            margin: $wordMargins;
+        }
+        //styling our this keyword
+        .this {
+            color: $thisCol;
+            margin: $wordMargins;
+        }
+        //styling tabs
+        .tabbed {
+            margin-left: 35px;
+        }
+    }
+}
+
+//styling our enter button
+#enterBtn {
+    font-size: 20px;
+    border-radius: 0px;
+    float: right;
+}
