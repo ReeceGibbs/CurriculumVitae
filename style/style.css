@@ -10895,6 +10895,11 @@ body {
 }
 
 #enterBtn {
+  display: none;
+}
+
+#enterBtn.show {
+  display: block;
   font-size: 20px;
   border-radius: 0px;
   float: right;

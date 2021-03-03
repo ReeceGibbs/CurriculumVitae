@@ -83,7 +83,11 @@ body {
 
 //styling our enter button
 #enterBtn {
-    font-size: 20px;
-    border-radius: 0px;
-    float: right;
+    display: none;
+    &.show {
+        display: block;
+        font-size: 20px;
+        border-radius: 0px;
+        float: right;
+    }
 }
