@@ -10904,4 +10904,30 @@ body {
   border-radius: 0px;
   float: right;
 }
+
+.header-container {
+  margin-top: 5%;
+}
+
+.header-container h1 {
+  color: white;
+}
+
+.header-container h4 {
+  color: white;
+}
+
+.skills-container {
+  display: none;
+}
+
+.skills-container.show {
+  margin-top: 2%;
+  display: block;
+  background-color: white;
+}
+
+.skills-container.show h3 {
+  color: #00234f;
+}
 /*# sourceMappingURL=style.css.map */

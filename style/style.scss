@@ -1,5 +1,7 @@
 @import "./bootstrap/scss/bootstrap";
 
+//setting our background colour
+$backgroundCol: #00234f;
 //setting our statment text colour
 $statementCol: rgb(247, 88, 233);
 //setting our standard text colour
@@ -21,7 +23,7 @@ $wordMargins: 0px 2px;
 
 // setting the style of of our splash page body
 body {
-    background-color: #00234f;
+    background-color: $backgroundCol;
 }
 
 // set the styling of our welcome message
@@ -89,5 +91,33 @@ body {
         font-size: 20px;
         border-radius: 0px;
         float: right;
+    }
+}
+
+// styling the header on our skills page
+.header-container {
+    //leaving a bit of a gap at the top of the page
+    margin-top: 5%;
+    h1 {
+        color: $standardCol;
+    }
+    h4 {
+        color: $standardCol;
+    }
+}
+
+//styling our skills content area
+.skills-container {
+    // we only show this after a few seconds
+    display: none;
+    &.show {
+        //leaving a bit of a gap between our header and this
+        margin-top: 2%;
+        display: block;
+        //changing the background colour to white
+        background-color: $standardCol;
+        h3 {
+            color: $backgroundCol;
+        }
     }
 }
