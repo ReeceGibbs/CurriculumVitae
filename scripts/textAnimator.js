@@ -19,7 +19,7 @@ let textSections = {
     'line16': [');'],
     'line17': ['// let\'s make sure you\'re having fun'],
     'line18': ['while', '(', 'guest', '.', 'isCurrentlyBrowsing', ') {'],
-    'line19': ['makeHappy', '(', 'guest', '); ', '// here we call our external function to make our guest happy'],
+    'line19': ['makeHappy', '(', 'guest', '); '],
     'line20': ['}'],
     'line21': ['// alright enough of this, let\'s take a look at my cv'],
     'line22': ['document', '.', 'getElementById', '(', '\'enterBtn\'', ')', '.', 'classList', '.', 'add', '(', '\'show\'', ');']
@@ -37,6 +37,8 @@ async function animateLines() {
         //we set the current line and lineId
         let lineId = `line${j}`;
         let line = textSections[`line${j}`];
+        //we want to make sure that the user can always see what is being typed even if they are using a mobile device
+        document.getElementById(lineId).scrollIntoView();
         //we take in an array of each section of our line as well as the line id
         for (let x = 0; x < line.length; x++) {
             //here we reference the relevant sections of our line
@@ -44,12 +46,14 @@ async function animateLines() {
             for (let i = 0; i < line[x].length; i++) {
                 //every 80 milliseconds we add the next character
                 document.querySelector(`#${lineId} .section${x}`).innerHTML += line[x].charAt(i);
-                await timer(50);
+                await timer(60);
             }
             //we pause a bit after every section
             await timer(250);
         }
     }
-    //now that everything is done we show the button that the user can use to enter our site
-    document.getElementById('enterBtn').classList.add('show');
+    //now that everything is done we show the button that the user can use to enter our site and that it gets scrolled to so the user can see it
+    let enterBtn = document.getElementById('enterBtn');
+    enterBtn.classList.add('show');
+    enterBtn.scrollIntoView();
 }

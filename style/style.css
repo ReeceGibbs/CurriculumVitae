@@ -10845,6 +10845,11 @@ body {
   margin-top: 5%;
 }
 
+#welcomeMessageContainer #welcomeMessage .d-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 #welcomeMessageContainer #welcomeMessage .statement {
   color: #f758e9;
   margin: 0px 2px;

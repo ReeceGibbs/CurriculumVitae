@@ -30,6 +30,10 @@ body {
 #welcomeMessageContainer {
     #welcomeMessage {
         margin-top: 5%;
+        // we need to make sure that our text doesn't go off the screen if users are using a smaller device
+        .d-flex {
+            flex-wrap: wrap;
+        }
         //styling statements
         .statement {
             color: $statementCol;
