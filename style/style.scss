@@ -111,13 +111,24 @@ body {
 
 //styling our skills content area
 .skills-container {
+    //styling the about section
+    .about {
+        margin-left: 25px;
+    }
+    .about-row {
+        align-items: center;
+    }
+    .about-img {
+        border: 5px solid $accentCol;
+        border-radius: 100%;
+    }
     // we only show this after a few seconds
     display: none;
     &.show {
         //leaving a bit of a gap between our header and this
         margin-top: 2%;
         //padding the container a bit
-        padding: 15px 15px;
+        padding: 25px 25px;
         display: block;
         //changing the background colour to white
         background-color: $standardCol;
@@ -126,6 +137,7 @@ body {
             border-top: 1px dashed $accentCol;
         }
         h3 {
+            color: $backgroundCol;
             &::before {
                 content: '- ';
                 color: $accentCol;
@@ -147,6 +159,15 @@ body {
             // removing our original bullet points
             list-style: none;
             //styling our points
+            li {
+                color: $backgroundCol;
+                a {
+                    color: $backgroundCol;
+                    &:hover {
+                        color: $accentCol;
+                    }
+                }
+            }
             li::before {
               content: '\21E2'; 
               color: $accentCol; 
@@ -165,7 +186,9 @@ body {
         // styling our progress bar headings
         .progress-header {
             vertical-align: top;
-            margin-right: 5px;
+            text-align: right;
+            margin-right: 20px;
+            width: 450px;
         }
     }
 }
