@@ -10841,13 +10841,13 @@ body {
   background-color: #00234f;
 }
 
-#welcomeMessageContainer #welcomeMessage {
-  margin-top: 5%;
-}
-
-#welcomeMessageContainer #welcomeMessage .d-flex {
+.d-flex {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#welcomeMessageContainer #welcomeMessage {
+  margin-top: 5%;
 }
 
 #welcomeMessageContainer #welcomeMessage .statement {
@@ -10936,6 +10936,7 @@ body {
 .skills-container .about-img {
   border: 5px solid #ff8800;
   border-radius: 100%;
+  margin-bottom: 10px;
 }
 
 .skills-container.show {
