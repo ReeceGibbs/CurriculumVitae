@@ -46,7 +46,7 @@ async function animateLines() {
             for (let i = 0; i < line[x].length; i++) {
                 //every 80 milliseconds we add the next character
                 document.querySelector(`#${lineId} .section${x}`).innerHTML += line[x].charAt(i);
-                await timer(60);
+                await timer(40);
             }
             //we pause a bit after every section
             await timer(250);
