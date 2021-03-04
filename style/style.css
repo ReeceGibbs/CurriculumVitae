@@ -10841,13 +10841,13 @@ body {
   background-color: #00234f;
 }
 
-.d-flex {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 #welcomeMessageContainer #welcomeMessage {
   margin-top: 5%;
+}
+
+#welcomeMessageContainer #welcomeMessage .d-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #welcomeMessageContainer #welcomeMessage .statement {
@@ -10931,6 +10931,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skills-container .about-img {
