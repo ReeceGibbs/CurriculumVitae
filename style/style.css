@@ -10914,11 +10914,7 @@ body {
   margin-top: 5%;
 }
 
-.header-container h1 {
-  color: white;
-}
-
-.header-container h4 {
+.header-container h1, .header-container h4 {
   color: white;
 }
 
@@ -10928,11 +10924,56 @@ body {
 
 .skills-container.show {
   margin-top: 2%;
+  padding: 15px 15px;
   display: block;
   background-color: white;
 }
 
-.skills-container.show h3 {
+.skills-container.show hr {
+  border-top: 1px dashed #ff8800;
+}
+
+.skills-container.show h3::before {
+  content: '- ';
+  color: #ff8800;
+}
+
+.skills-container.show h3::after {
+  content: ' -';
+  color: #ff8800;
+}
+
+.skills-container.show h2, .skills-container.show h4, .skills-container.show h5 {
   color: #00234f;
+}
+
+.skills-container.show p {
+  color: #00234f;
+  font-size: 20px;
+}
+
+.skills-container.show ul {
+  list-style: none;
+}
+
+.skills-container.show ul li::before {
+  content: '\21E2';
+  color: #ff8800;
+  font-weight: bold;
+  width: 1em;
+  margin: 2px 5px;
+}
+
+.skills-container.show .progress-bar {
+  background-color: #ff8800;
+}
+
+.skills-container.show .progress {
+  margin-top: 3px;
+}
+
+.skills-container.show .progress-header {
+  vertical-align: top;
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */

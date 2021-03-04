@@ -18,6 +18,8 @@ $commentsCol: rgb(219, 217, 217);
 $newCol: rgb(0, 235, 0);
 //setting this colour
 $thisCol: rgb(0, 255, 191);
+// setting our accent colour
+$accentCol: rgb(255, 136, 0);
 //setting our word spacing
 $wordMargins: 0px 2px;
 
@@ -102,10 +104,7 @@ body {
 .header-container {
     //leaving a bit of a gap at the top of the page
     margin-top: 5%;
-    h1 {
-        color: $standardCol;
-    }
-    h4 {
+    h1, h4 {
         color: $standardCol;
     }
 }
@@ -117,11 +116,56 @@ body {
     &.show {
         //leaving a bit of a gap between our header and this
         margin-top: 2%;
+        //padding the container a bit
+        padding: 15px 15px;
         display: block;
         //changing the background colour to white
         background-color: $standardCol;
+        //styling our horizontal rules and headings
+        hr {
+            border-top: 1px dashed $accentCol;
+        }
         h3 {
+            &::before {
+                content: '- ';
+                color: $accentCol;
+            }
+            &::after {
+                content: ' -';
+                color: $accentCol;
+            }
+        }
+        h2, h4, h5 {
             color: $backgroundCol;
+        }
+        p {
+            color: $backgroundCol;
+            font-size: 20px;
+        }
+        //styling our unordered lists
+        ul {
+            // removing our original bullet points
+            list-style: none;
+            //styling our points
+            li::before {
+              content: '\21E2'; 
+              color: $accentCol; 
+              font-weight: bold;
+              width: 1em; 
+              margin: 2px 5px;
+            }
+        }
+        // styling our progress bars
+        .progress-bar {
+            background-color: $accentCol;
+        }
+        .progress {
+            margin-top: 3px;
+        }
+        // styling our progress bar headings
+        .progress-header {
+            vertical-align: top;
+            margin-right: 5px;
         }
     }
 }
