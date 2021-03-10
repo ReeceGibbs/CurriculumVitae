@@ -2,28 +2,33 @@
 let textSections = {
     'line0':['// hi there... my name is Reece'],
     'line1': ['// welcome to my cv (curriculum vitea)'],
-    'line2': ['// let\'s get some things set up for you'],
-    'line3': ['// defining our visitor constructor'],
-    'line4': ['function ', 'visitor', '(', 'personVisiting', ',', 'isCurrentlyBrowsing', ',', 'isWelcome', ',', 'isImpressed', ') {'],
-    'line5': ['this', '.', 'personVisiting', ' = ', 'personVisiting', ';'],
-    'line6': ['this', '.', 'isCurrentlyBrowsing', ' = ', 'isCurrentlyBrowsing', ';'],
-    'line7': ['this', '.', 'isWelcome', ' = ', 'isWelcome', ';'],
-    'line8': ['this', '.', 'isImpressed', ' = ', 'isImpressed', ';'],
-    'line9': ['}'],
-    'line10': ['// initialising our visitor using our constructor'],
-    'line11': ['let ', 'guest', ' = ', 'new ', 'visitor', '('],
-    'line12': ['JSON', '.', 'stringify', '(', 'you', '),'],
-    'line13': ['true', ','],
-    'line14': ['true', ',', '// of course you are welcome!!!'],
-    'line15': ['true', '// well at least I hope so...'],
-    'line16': [');'],
-    'line17': ['// let\'s make sure you\'re having fun'],
-    'line18': ['while', '(', 'guest', '.', 'isCurrentlyBrowsing', ') {'],
-    'line19': ['makeHappy', '(', 'guest', '); '],
-    'line20': ['}'],
-    'line21': ['// alright enough of this, let\'s take a look at my cv'],
-    'line22': ['document', '.', 'getElementById', '(', '\'enterBtn\'', ')', '.', 'classList', '.', 'add', '(', '\'show\'', ');']
+    'line2': ['// if you aren\'t interested in this intro page, feel free to speed it up by clicking anywhere on the screen'],
+    'line3': ['// alright... let\'s get some things set up for you'],
+    'line4': ['// defining our visitor constructor'],
+    'line5': ['function ', 'visitor', '(', 'personVisiting', ',', 'isCurrentlyBrowsing', ',', 'isWelcome', ',', 'isImpressed', ') {'],
+    'line6': ['this', '.', 'personVisiting', ' = ', 'personVisiting', ';'],
+    'line7': ['this', '.', 'isCurrentlyBrowsing', ' = ', 'isCurrentlyBrowsing', ';'],
+    'line8': ['this', '.', 'isWelcome', ' = ', 'isWelcome', ';'],
+    'line9': ['this', '.', 'isImpressed', ' = ', 'isImpressed', ';'],
+    'line10': ['}'],
+    'line11': ['// initialising our visitor using our constructor'],
+    'line12': ['let ', 'guest', ' = ', 'new ', 'visitor', '('],
+    'line13': ['JSON', '.', 'stringify', '(', 'you', '),'],
+    'line14': ['true', ','],
+    'line15': ['true', ',', '// of course you are welcome!!!'],
+    'line16': ['true', '// well at least I hope so...'],
+    'line17': [');'],
+    'line18': ['// let\'s make sure you\'re having fun'],
+    'line19': ['while', '(', 'guest', '.', 'isCurrentlyBrowsing', ') {'],
+    'line20': ['makeHappy', '(', 'guest', '); '],
+    'line21': ['}'],
+    'line22': ['// alright enough of this, let\'s take a look at my cv'],
+    'line23': ['document', '.', 'getElementById', '(', '\'enterBtn\'', ')', '.', 'classList', '.', 'add', '(', '\'show\'', ');']
 }
+
+// variable that control the speed of our text animation
+let lettersMs = 20;
+let wordsMs = 250;
 
 //defining our promise function that will return after {ms} for our async animateLine function https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop/44476626
 const timer = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -46,14 +51,20 @@ async function animateLines() {
             for (let i = 0; i < line[x].length; i++) {
                 //every 80 milliseconds we add the next character
                 document.querySelector(`#${lineId} .section${x}`).innerHTML += line[x].charAt(i);
-                await timer(40);
+                await timer(lettersMs);
             }
             //we pause a bit after every section
-            await timer(250);
+            await timer(wordsMs);
         }
     }
     //now that everything is done we show the button that the user can use to enter our site and that it gets scrolled to so the user can see it
     let enterBtn = document.getElementById('enterBtn');
     enterBtn.classList.add('show');
     enterBtn.scrollIntoView();
+}
+
+// function to handle the instance in which someone would like to speed up the text intro
+function speedUp() {
+    lettersMs = 1;
+    wordsMs = 5;
 }

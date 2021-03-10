@@ -10904,6 +10904,8 @@ body {
 }
 
 #enterBtn.show {
+  border: none;
+  background-color: #ff8800;
   display: block;
   font-size: 20px;
   border-radius: 0px;
@@ -10915,7 +10917,11 @@ body {
   margin-top: 5%;
 }
 
-.header-container h1, .header-container h4 {
+.header-container h1 {
+  color: #ff8800;
+}
+
+.header-container h4 {
   color: white;
 }
 
@@ -10931,6 +10937,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.skills-container .about-row.about-row-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -10939,6 +10948,7 @@ body {
   border: 5px solid #ff8800;
   border-radius: 100%;
   margin-bottom: 10px;
+  width: 250px;
 }
 
 .skills-container.show {

@@ -95,6 +95,8 @@ body {
 #enterBtn {
     display: none;
     &.show {
+        border: none;
+        background-color: $accentCol;
         display: block;
         font-size: 20px;
         border-radius: 0px;
@@ -107,7 +109,10 @@ body {
 .header-container {
     //leaving a bit of a gap at the top of the page
     margin-top: 5%;
-    h1, h4 {
+    h1 {
+        color: $accentCol;
+    }
+    h4 {
         color: $standardCol;
     }
 }
@@ -120,12 +125,16 @@ body {
     }
     .about-row {
         align-items: center;
-        flex-wrap: wrap;
+        &.about-row-wrap {
+            flex-wrap: wrap;
+        }
     }
+
     .about-img {
         border: 5px solid $accentCol;
         border-radius: 100%;
         margin-bottom: 10px;
+        width: 250px;
     }
     // we only show this after a few seconds
     display: none;
