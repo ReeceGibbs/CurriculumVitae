@@ -2,15 +2,13 @@
 function pageLoad() {
     // initialize our about row
     let aboutRow = document.querySelector('#aboutRow');
-    // we only load our skills section after 2 seconds
-    setTimeout(function() {
-        document.querySelector('.skills-container').classList.add('show');
-        
-        // check to see if window is small and wrap our about elements if it is we make sure to wrap our content
-        if (checkSmallWindow()) {
-            aboutRow.classList.add('about-row-wrap');
-        }
-    }, 2000);
+    
+    document.querySelector('.skills-container').classList.add('show');
+    
+    // check to see if window is small and wrap our about elements if it is we make sure to wrap our content
+    if (checkSmallWindow()) {
+        aboutRow.classList.add('about-row-wrap');
+    }
 }
 
 //function to check the body size to see if we need to wrap the about row
