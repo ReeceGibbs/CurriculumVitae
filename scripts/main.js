@@ -2,6 +2,14 @@
 function pageLoad() {
     // initialize our about row
     let aboutRow = document.querySelector('#aboutRow');
+
+    //we set the innerHtml of our employment period tag to the current date - my employment start date
+    let today = new Date();
+
+    let employmentStartDate = new Date(2018, 06);
+
+    //we reference our employmentDate tag by id
+    document.getElementById('employmentPeriod').innerHTML = calcDate(today, employmentStartDate);
     
     document.querySelector('.skills-container').classList.add('show');
     
@@ -29,3 +37,22 @@ window.onresize = function () {
         aboutRow.classList.remove('about-row-wrap');
     }
 };
+
+//a simple function that calculates the difference between two dates https://stackoverflow.com/questions/17732897/difference-between-two-dates-in-years-months-days-in-javascript
+function calcDate(date1, date2) {
+
+    //we get the difference between the two dates
+    let difference = Math.floor(date1.getTime() - date2.getTime());
+
+    //a day in milliseconds
+    let day = 1000 * 60 * 60 * 24;
+
+    //we get the difference in years
+    let diffInYears = Math.floor(Math.floor(difference/day)/31)/12;
+
+    //we build the date string
+    let dateString = `${Math.floor(diffInYears)} years ${(diffInYears - Math.floor(diffInYears)) * 12} months`;
+
+    //finally we return the date string
+    return dateString;
+}
