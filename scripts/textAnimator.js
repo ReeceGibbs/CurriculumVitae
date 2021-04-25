@@ -1,7 +1,7 @@
 //initialize our array of objects for each line and its sections
 let textSections = {
     'line0':['// hi there... my name is Reece'],
-    'line1': ['// welcome to my cv (curriculum vitea)'],
+    'line1': ['// welcome to my cv (curriculum vitae)'],
     'line2': ['// if you aren\'t interested in this intro page, feel free to speed it up by clicking anywhere on the screen'],
     'line3': ['// alright... let\'s get some things set up for you'],
     'line4': ['// defining our visitor constructor'],
