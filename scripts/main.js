@@ -51,7 +51,6 @@ function calcDate(date1, date2) {
     let diffInYears = Math.floor(Math.floor(difference/day)/31)/12;
 
     //we build the date string
-    let dateString = `${Math.floor(diffInYears)} years ${
     let dateString = `${Math.floor(diffInYears)} years ${Math.floor((diffInYears - Math.floor(diffInYears)) * 12)} months`;
 
     //finally we return the date string
