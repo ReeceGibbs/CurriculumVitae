@@ -42,13 +42,13 @@ window.onresize = function () {
 function calcDate(date1, date2) {
 
     //we get the difference between the two dates
-    let difference = Math.floor(date1.getTime() - date2.getTime());
+    let difference = Math.abs(date1 - date2);
 
     //a day in milliseconds
-    let day = 1000 * 60 * 60 * 24;
+    let days = Math.ceil(difference / (1000 * 60 * 60 * 24));
 
     //we get the difference in years
-    let diffInYears = Math.floor(Math.floor(difference/day)/31)/12;
+    let diffInYears = days/365;
 
     //we build the date string
     let dateString = `${Math.floor(diffInYears)} years ${Math.floor((diffInYears - Math.floor(diffInYears)) * 12)} months`;
